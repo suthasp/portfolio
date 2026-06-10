@@ -158,12 +158,18 @@
   .p3{background:radial-gradient(circle at 70% 20%,#8a6d1f 0%,#1a1a1c 55%)}
   .p4{background:conic-gradient(from 210deg at 60% 40%,#33363e,#0d0e11,#2a2c33,#0d0e11)}
   .p5{background:linear-gradient(135deg,#41464f 0%,#14161a 70%)}
-  /* light mode — mid-tone colorful gradients so cards look distinct from dark mode */
-  [data-theme="light"] .p1{background:radial-gradient(circle at 30% 25%,#6b8fcc 0%,#2a4878 60%)}
-  [data-theme="light"] .p2{background:linear-gradient(160deg,#9b6cc8 0%,#4a2080 55%)}
-  [data-theme="light"] .p3{background:radial-gradient(circle at 70% 20%,#d4960a 0%,#6b4a00 55%)}
-  [data-theme="light"] .p4{background:conic-gradient(from 210deg at 60% 40%,#3aada8,#0e5858,#2ea8a5,#0e5858)}
-  [data-theme="light"] .p5{background:linear-gradient(135deg,#5ca87a 0%,#1e5e36 70%)}
+  /* light mode — white/light cards matching the page aesthetic */
+  [data-theme="light"] .p1{background:linear-gradient(135deg,#eef2ff 0%,#ffffff 65%)}
+  [data-theme="light"] .p2{background:linear-gradient(135deg,#f3eeff 0%,#ffffff 65%)}
+  [data-theme="light"] .p3{background:linear-gradient(135deg,#fff8e8 0%,#ffffff 65%)}
+  [data-theme="light"] .p4{background:linear-gradient(135deg,#edfafa 0%,#ffffff 65%)}
+  [data-theme="light"] .p5{background:linear-gradient(135deg,#edfff4 0%,#ffffff 65%)}
+  [data-theme="light"] .proj{border-color:var(--border)}
+  [data-theme="light"] .proj::before{background:none}
+  [data-theme="light"] .card.on-img .chip{
+    background:rgba(255,255,255,.88);color:var(--text);
+    border-color:var(--border);backdrop-filter:blur(6px);
+  }
   .proj::before{
     content:"";position:absolute;inset:0;
     background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45));
